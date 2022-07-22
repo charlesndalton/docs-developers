@@ -409,8 +409,8 @@ user_data_encoded = eth_abi.encode_abi(['uint256'], [0])
 swap_struct = (
 	swap["poolId"],
 	swap_kind,
-	web3.toChecksumAddress(swap["assetIn"]),
-	web3.toChecksumAddress(swap["assetOut"]),
+	Web3.toChecksumAddress(swap["assetIn"]),
+	Web3.toChecksumAddress(swap["assetOut"]),
 	int(Decimal(swap["amount"]) * 10 ** Decimal((token_data[swap["assetIn"]]["decimals"]))),
 	user_data_encoded
 )
